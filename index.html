@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/57f2999c93.js"></script>
 </head>
 
@@ -227,15 +230,16 @@
     </div>
     <!-- End #skills -->
 
+
     <div id="contact">
         <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/adamkojak@gmail.com">
-                <input type="email" name="email" placeholder="Your email">
-                <input type="hidden" name="_next" value="//site.io/thanks.html" />
+        <div>
+            <form id="contact-form" method="POST" action="https://formspree.io/adamkojak@gmail.com">
+                <input type="email" name="_replyto" placeholder="Your email">
                 <textarea name="message" placeholder="Your message"></textarea>
                 <button type="submit">Send</button>
-              </form>
+                <input type="hidden" name="_next" value="www.reddit.com" />
+            </form>
         </div>
         <!-- End #contact-form -->
     </div>
@@ -300,7 +304,12 @@
 <link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css"
 />
 <script type="text/javascript">
+
+
     $(function () {
+
+
+
         var fileName = "Adam Kojak Resume.pdf";
         $("#btnShow").click(function () {
             $("#dialog").dialog({
