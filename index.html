@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/57f2999c93.js"></script>
 </head>
 
 <body>
@@ -49,7 +50,8 @@
 
     <div id="lead">
         <div id="lead-content">
-            <h1>Adam Kojak</h1>
+            <h1>&#60;name&#62;Adam Kojak&#60;name/&#62;</h1>
+            <i class="fa fa-3x fa-exclamation-circle blink"></i>
             <h2>Web Developer</h2>
             <a id="btnShow" type="button" value="Show PDF" href="#" class="btn-rounded-white">View Resume</a>
             <div id="dialog" style="display: none"></div>
@@ -71,24 +73,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                        
-                    <h2 class="heading">  About Me&nbsp;&nbsp;</h2>
-                    <img src="images/self.JPG" alt="self.JPG" width="200" height="325">    
+
+                    <h2 class="heading"> About Me&nbsp;&nbsp;</h2>
+                    <img src="images/self.JPG" alt="self.JPG" width="200" height="325">
                 </div>
-                  
+
                 <div class="col-md-8">
                     <p>
                         I'm a Junior web developer and creative strategist. I recently finished the Rutgers Coding Bootcamp program at Rutgers, The
                         State University of New Jersey where I learned how to design, build, and implement websites from
-                        the ground up. I currently specialize in business accounting where I maintain an organization's
-                        financials while combining technological efficiency with my accounting knowledge. Having a proficient
-                        knowledge of enterprise systems, databases, and coding experience has given me an advantage of combining technology
+                        the ground up. I currently specialize in business accounting where I maintain an organization's financials
+                        while combining technological efficiency with my accounting knowledge. Having a proficient knowledge
+                        of enterprise systems, databases, and coding experience has given me an advantage of combining technology
                         can complement my profession. It has also made me a more logical thinker in which I'm searching for
-                        that 'perfect fit' in a team which I can contirbute and grow with. My favorite days are
-                        spent in the space between visualizing a product and taking action as a developer, I love projects
-                        where I get to be a part of both processes. As a developer I can push the boundaries on my idea,
-                        because I know the code to make it happen, and how to design it. I always force myself out of my
-                        coding comfort zone to create and discover new possibilities.
+                        that 'perfect fit' in a team which I can contirbute and grow with. My favorite days are spent in
+                        the space between visualizing a product and taking action as a developer, I love projects where I
+                        get to be a part of both processes. As a developer I can push the boundaries on my idea, because
+                        I know the code to make it happen, and how to design it. I always force myself out of my coding comfort
+                        zone to create and discover new possibilities.
                     </p>
                 </div>
             </div>
@@ -96,7 +98,9 @@
     </div>
     <!-- End #about -->
     <div class="parallax"></div>
-    <div><a href="https://ak1.picdn.net/shutterstock/videos/29762701/thumb/4.jpg"></a></div>
+    <div>
+        <a href="https://ak1.picdn.net/shutterstock/videos/29762701/thumb/4.jpg"></a>
+    </div>
 
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
@@ -164,7 +168,7 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/beerTinder.png"  width="300" height="300"/>
+                        <img src="images/beerTinder.png" width="300" height="300" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -217,6 +221,7 @@
             <li>Express</li>
             <li>Handlebars JS</li>
             <li>React.js</li>
+            <i class="fab fa-react"></i>
             <li>Python</li>
         </ul>
     </div>
@@ -225,11 +230,16 @@
     <div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
+            <!-- <form method="POST" action="https://formspree.io/adamkojak@gmail.com">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
                 <input type="email" name="_replyto" placeholder="Your email" required>
                 <textarea name="message" placeholder="Your message" required></textarea>
                 <button type="submit">Send</button>
+            </form> -->
+            <form action="https://formspree.io/adamkojak@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your email" required>
+                <textarea type="email" name="_replyto" placeholder="Your message" required></textarea>
+                <button type="submit" value="Send">Send</button>
             </form>
         </div>
         <!-- End #contact-form -->
@@ -292,7 +302,8 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
-<link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css"
+/>
 <script type="text/javascript">
     $(function () {
         var fileName = "Adam Kojak Resume.pdf";
