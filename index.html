@@ -10,11 +10,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/57f2999c93.js"></script>
 </head>
 
@@ -234,12 +231,36 @@
     <div id="contact">
         <h2>Get in Touch</h2>
         <div>
-            <form id="contact-form" method="POST" action="https://formspree.io/adamkojak@gmail.com">
+            <!-- <form id="contact-form" method="POST" action="https://formspree.io/adamkojak@gmail.com">
                 <input type="email" name="_replyto" placeholder="Your email">
+                <input type="text" name="_gotcha" style="display:none" />
                 <textarea name="message" placeholder="Your message"></textarea>
                 <button type="submit">Send</button>
                 <input type="hidden" name="_next" value="//jakadamko.github.io/devPortfolio/" />
-            </form>
+            </form> -->
+
+            <form id="contactform" method="POST" action="https://formspree.io/adamkojak@gmail.com">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">Name</span>
+                        <input name="form-name-input" type="text" name="name" class="form-control" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Email</span>
+                        <input name="form-email-input" type="email" name="_replyto" class="form-control" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Subject</span>
+                        <input name="form-subject-input" type="text" name="subject" class="form-control" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Description</span>
+                        <textarea name="form-description-input" name="description" class="form-control" rows="4" cols="60" required></textarea>
+                    </div>
+                    <input type="text" name="_gotcha" style="display:none" />
+                    <button id="sendMessage">Send</button>
+                </div>
+
         </div>
         <!-- End #contact-form -->
     </div>
@@ -304,6 +325,20 @@
 <link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css"
 />
 <script type="text/javascript">
+
+var message = "";
+
+$("#sendMessage").on("click", function() {
+    message = $("#contactform").serialize();
+    $.ajax({
+        url: "//formspree.io/adamkojak@gmail.com", 
+        method: "POST",
+        data: {message: message},
+        dataType: "json"
+    });
+    alert('Thanks for the email, we\'ll be in touch promptly.');
+    return false;
+});
 
 
     $(function () {
