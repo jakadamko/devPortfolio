@@ -28,6 +28,8 @@
 .blink {
     animation: blink 2s steps(5, start) infinite;
     -webkit-animation: blink 1s steps(5, start) infinite;
+    font-weight: 800;
+    font-size: 100px;
   }
   @keyframes blink {
     to {
@@ -38,4 +40,32 @@
     to {
       visibility: hidden;
     }
+  }
+
+  .devicon-jquery-plain-wordmark {
+    font-size: 10rem
+  }
+
+  .devicon-bootstrap-plain-wordmark{
+    font-size: 9rem
+  }
+
+  .devicon-heroku-plain-wordmark{
+    font-size: 9rem
+  }
+
+  .devicon-mysql-plain-wordmark{
+    font-size: 9rem
+  }
+
+  .devicon-mongodb-plain-wordmark{
+    font-size:9rem
+  }
+
+  .devicon-express-original-wordmark{
+    font-size:9rem
+  }
+
+  .devicon-django-plain-wordmark{
+    font-size:9rem
   }
