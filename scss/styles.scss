@@ -721,8 +721,7 @@ footer {
         font-size: 6.0em;
     }
     li:hover {
-        background-color: yellow;
-    }
+        background-color: #17a2b8    }
 
 
 }
@@ -1028,7 +1027,7 @@ footer {
     position: absolute;
     top: 50%;
     left: 25%;
-    width: 1000px;
+    width: 1060px;
     height: 400px;
     margin-top: -200px;
     margin-left: -500px;
@@ -1314,7 +1313,7 @@ footer {
         width: 85px;
         height: 120px;
         top: 0;
-        left: 550px;
+        left: 565px;
 
         .left {
             top: 0;
@@ -1403,6 +1402,169 @@ footer {
         }
 
     }
+
+    .jj {
+        position: absolute;
+        width: 72px;
+        height: 120px;
+        top: 0;
+        left: 762px;
+
+        .left {
+            top: 0;
+            left: 69px;
+            height: 90px;
+            width: 6px;
+            @include animation();
+        }
+        
+        .right {
+            position: absolute;
+            z-index: 1;
+            top: 58;
+            right: -46;
+            height: 72px;
+            width: 75px;
+            
+            $delay: (random(400) / 100) * 1s;
+            
+            .circleBox .circle {
+                animation: flickr-circlejj 6s ease-in-out $delay infinite alternate both;
+            }
+
+            
+            .circleBox {
+                position: absolute;
+                top: -40px;
+                right: -10px;
+                bottom: -10px;
+                width: 70px;
+                
+                
+                .circle {
+                    box-sizing: border-box;
+                    position: absolute;
+                    width: 75px;
+                    height: 75px;
+                    top: 90px;
+                    right: 10px;
+                    border-style: solid;
+                    border-width: 6px;
+                    border-color: #1A1E24 #1A1E24 transparent transparent;
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 9px 1px #1A1E24, inset 0px 0px 10px 0px #F1F4F5;
+                    transform: rotate(138deg);
+                }
+                
+            }
+            
+        }
+
+        .rightSVG {
+            position: absolute;
+            top: 0;
+            right: 0;
+            fill: none;
+            stroke: #1A1E24;
+            stroke-width: 6;
+            stroke-linecap: round;
+            stroke-dasharray: 88 176 176;
+            filter: drop-shadow( 0px 0px 6px #1A1E24 );
+            //animation: flickr-svg 6s ease-in-out ( (random(400) / 100) * 1s ) infinite alternate;
+        }
+
+    }
+
+    .aaa {
+        position: absolute;
+        width: 69px;
+        height: 120px;
+        top: 0;
+        left: 870px;
+
+        .left {
+            top: 5px;
+            left: 29px;
+            height: 120px;
+            width: 6px;
+            transform-origin: 3px 3px;
+            transform: rotate(24deg);
+            @include animation();
+        }
+
+        .right {
+            top: 0;
+            right: 0;
+            height: 120px;
+            width: 6px;
+            @include animation();
+        }
+
+        .top {
+            top: 0;
+            right: 0;
+            height: 6px;
+            width: 33px;
+            @include animation();
+        }
+
+        .middle {
+            top: 56px;
+            left: 9px;
+            height: 6px;
+            width: 50px;
+            @include animation();
+        }
+
+        .bottom {
+            bottom: 0;
+            right: 0;
+            height: 6px;
+            width: 60px;
+            @include animation();
+        }
+
+    }
+
+    .kkk {
+        position: absolute;
+        width: 85px;
+        height: 120px;
+        top: 0;
+        left: 960px;
+
+        .left {
+            top: 0;
+            left: 0;
+            height: 120px;
+            width: 6px;
+            @include animation();
+        }
+
+        .middle {
+            top: 53px;
+            left: 9px;
+            height: 6px;
+            width: 75px;
+            transform-origin: 3px 3px;
+            // transform: rotate(62deg);
+            transform: rotate(55deg);
+            @include animation();
+        }
+
+        .rightMiddle {
+            top: 53px;
+            left: 9px;
+            height: 6px;
+            width: 75px;
+            transform-origin: 3px 3px;
+            // transform: rotate(62deg);
+            transform: rotate(-51deg);
+            @include animation();
+        }
+
+
+    }
  
 
 }
@@ -1420,7 +1582,7 @@ footer {
 
 @keyframes flickr-circle {
     35%, 37%, 39%, 41%, 100% {
-        border-color: #F1F4F5 #F1F4F5 transparent transparent;
+        border-color: #F1F4F5 #F1F4F5 #F1F4F5 #F1F4F5;
         box-shadow: 0px 0px 10px 0px #F1F4F5, inset 0px 0px 10px 0px #F1F4F5;
     }
     0%, 34%, 36%, 36%, 38%, 40% {
@@ -1429,16 +1591,18 @@ footer {
     }
 }
 
-@keyframes flickr-dots {
+@keyframes flickr-circlejj {
     35%, 37%, 39%, 41%, 100% {
-        background: #F1F4F5;
-        box-shadow: 0px 0px 9px 1px #F1F4F5;
+        border-color: #F1F4F5 #F1F4F5 transparent transparent;
+        box-shadow: 0px 0px 10px 0px #f1f4f50a, inset 0px 0px 10px 0px #f1f4f50a;
     }
     0%, 34%, 36%, 36%, 38%, 40% {
-        background: #1A1E24;
-        box-shadow: 0px 0px 5px 1px #1A1E24;
+        border-color: #1A1E24 #1A1E24 transparent transparent;
+        box-shadow: 0px 0px 6px 0px #1A1E24, inset 0px 0px 6px 0px #1A1E24;
     }
 }
+
+
 
 @keyframes flickr-svg {
     35%, 37%, 39%, 41%, 100% {
